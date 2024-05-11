@@ -1,0 +1,61 @@
+﻿@model TrialProject.Mvc.Models.SiteModel
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <div>
+            @using (Html.BeginForm("AddWidget", "SiteForm", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="container-md justify-content-center align-middle">
+                    <h1>Another Site Dynamic module</h1>
+                    
+                    <div class="form-group">
+                        <label for="Name">Title:</label>
+                        <input type="text" class="form-control" id="Title" name="Title">
+                    </div>
+                    <!-- Dropdown list for site selection -->
+                    <div class="form-group">
+                        <label for="Site">Select Site:</label>
+                        <select class="form-control" id="Site" name="Site">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description:</label>
+                        <input type="text" class="form-control" id="Description" name="Description">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Tags">Tags:</label>
+                        <input type="text" class="form-control" id="Tags" name="Tags">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Category">Category:</label>
+                        <input type="text" class="form-control" id="Category" name="Category">
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="file" class="form-control" id="ItemImage" name="ItemImage">
+                    </div>
+
+
+                    <button type="submit">Submit</button>
+                </div>
+            }
+        </div>
+ 
+    </div>
+</body>
+</html>
